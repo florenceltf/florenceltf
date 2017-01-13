@@ -1,0 +1,18 @@
+header {
+  padding-top: 20px;
+  overflow: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header span {
+  font-weight: normal;
+  font-size: 26px;
+  border-bottom: 1px solid transparent;
+}
+
+header span:hover {
+  text-decoration: underline;
+  border-bottom: 1px solid black;
+  color: transparent;
+}

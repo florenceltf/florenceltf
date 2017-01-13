@@ -1,0 +1,16 @@
+.information {
+  margin: 30px;
+  font-size: 2.5em;
+  text-align: center;
+  color: white;
+}
+
+.information a {
+  color: white;
+  text-decoration: none;
+}
+
+.information a:hover {
+  border-bottom: 4px solid white;
+  color: transparent;
+}

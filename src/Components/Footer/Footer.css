@@ -1,0 +1,45 @@
+.footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  padding-bottom: 20px;
+  font-size: 26px;
+};
+
+span.align-left{
+  display: block;
+  float:left;
+  width: 100px;
+}
+
+.align-right{
+  text-align: right;
+  display: block;
+  float:right;
+}
+
+.align-left {
+  margin-left: 32px;
+  text-decoration: none;
+  color: black;
+}
+
+.align-left:hover {
+  text-decoration: underline;
+  border-bottom: 1px solid black;
+  color: transparent;
+}
+
+.align-right {
+  margin-right: 32px;
+  text-decoration: none;
+  color: black;
+}
+
+.align-right:hover {
+  text-decoration: underline;
+  border-bottom: 1px solid black;
+  color: transparent;
+}
