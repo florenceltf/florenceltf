@@ -1,5 +1,4 @@
 .gallery {
-  padding-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
   max-width: 800px;
@@ -10,7 +9,7 @@
   left:0; right:0;
   top:0; bottom:0;
   margin:auto;
-  height: 80%;
+  height: 100%;
   width: 80%;
 }
 
