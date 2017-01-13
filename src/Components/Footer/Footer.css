@@ -43,3 +43,12 @@ span.align-left{
   border-bottom: 1px solid black;
   color: transparent;
 }
+
+.span-info {
+  color: white;
+}
+
+.span-info:hover {
+  color: transparent;
+  border-color: white;
+}

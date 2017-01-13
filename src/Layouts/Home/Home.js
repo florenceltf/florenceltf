@@ -16,6 +16,7 @@ class Home extends Component {
       style: {
         backgroundColor: 'white',
       },
+      spanClass: '',
     };
 
     this.showInformation = this.showInformation.bind(this);
@@ -38,6 +39,7 @@ class Home extends Component {
     this.setState({
       ...this.state,
       page: 'Index',
+      spanClass: '',
     });
     document.body.style.backgroundColor = 'white';
   }
@@ -46,6 +48,7 @@ class Home extends Component {
     this.setState({
       ...this.state,
       page: 'Information',
+      spanClass: 'span-info',
     });
     document.body.style.backgroundColor = 'blue';
   }
@@ -54,6 +57,7 @@ class Home extends Component {
     this.setState({
       ...this.state,
       page: 'Home',
+      spanClass: '',
     });
     document.body.style.backgroundColor = 'white';
   }
@@ -61,11 +65,15 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Header showHome={this.showHome} />
+        <Header
+          showHome={this.showHome}
+          spanClass={this.state.spanClass}
+        />
         {this.getPage(this.state.page)}
         <Footer
           showInformation={this.showInformation}
           showIndex={this.showIndex}
+          spanClass={this.state.spanClass}
         />
       </div>
     );
