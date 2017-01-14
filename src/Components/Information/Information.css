@@ -5,6 +5,13 @@
   color: white;
 }
 
+@media screen and (max-width: 570px) {
+  .information {
+    margin-top: 80px;
+    font-size: 1.5em; 
+  }
+}
+
 .information a {
   color: white;
   text-decoration: none;
