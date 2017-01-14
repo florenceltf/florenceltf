@@ -45,10 +45,16 @@
     opacity: 0.2;
 }
 
-.hover-text {
+.hover-text-container {
   display:table-cell;
   vertical-align:middle;
   max-width: 100%;
   max-height: 100%;
+  position:relative;
+  color: transparent;
 }
 
+.hover-text:hover {
+  color: white;
+  z-index: 10;
+}
