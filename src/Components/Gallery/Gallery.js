@@ -58,7 +58,7 @@ class Gallery extends Component {
       <div className="gallery">
         <img className="gallery-image" src={this.state.images[this.state.imageIndex]} alt="THUMB_1" />
         <div className="hover-text-container">
-          <span className="hover-text">Image credits....the internet</span>
+          <span className="hover-text">Credit: The Internet</span>
         </div>
       </div>
     );

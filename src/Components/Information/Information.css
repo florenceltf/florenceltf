@@ -3,6 +3,7 @@
   font-size: 3em;
   text-align: center;
   color: white;
+  margin-bottom: 120px;
 }
 
 @media screen and (max-width: 570px) {
@@ -22,6 +23,11 @@
   color: transparent;
 }
 
+.information p a:hover {
+  border-width: 1px;
+}
+
 .information p {
   font-size: 26px;
+  line-height: 1.4em;
 }

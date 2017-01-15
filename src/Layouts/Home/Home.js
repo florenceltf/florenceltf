@@ -22,6 +22,8 @@ class Home extends Component {
     this.showInformation = this.showInformation.bind(this);
     this.showIndex = this.showIndex.bind(this);
     this.showHome = this.showHome.bind(this);
+
+    console.log('HEY...no funny business :)');
   }
 
   getPage(page) {
@@ -50,7 +52,7 @@ class Home extends Component {
       page: 'Information',
       spanClass: 'span-info',
     });
-    document.body.style.backgroundColor = 'blue';
+    document.body.style.backgroundColor = 'black';
   }
 
   showHome() {
