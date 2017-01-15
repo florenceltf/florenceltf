@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Gallery from '../../Components/Gallery';
 import Information from '../../Components/Information';
-import Index from '../../Components/Index';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import './Home.css';
@@ -20,7 +19,6 @@ class Home extends Component {
     };
 
     this.showInformation = this.showInformation.bind(this);
-    this.showIndex = this.showIndex.bind(this);
     this.showHome = this.showHome.bind(this);
 
     console.log('HEY...no funny business :)');
@@ -30,20 +28,9 @@ class Home extends Component {
     switch (page) {
       case 'Information':
         return <Information />;
-      case 'Index':
-        return <Index />;
       default:
         return <Gallery />;
     }
-  }
-
-  showIndex() {
-    this.setState({
-      ...this.state,
-      page: 'Index',
-      spanClass: '',
-    });
-    document.body.style.backgroundColor = 'white';
   }
 
   showInformation() {
@@ -74,7 +61,6 @@ class Home extends Component {
         {this.getPage(this.state.page)}
         <Footer
           showInformation={this.showInformation}
-          showIndex={this.showIndex}
           spanClass={this.state.spanClass}
         />
       </div>
