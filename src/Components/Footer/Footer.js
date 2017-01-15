@@ -4,8 +4,8 @@ import './Footer.css';
 const Footer = (props) => {
   return (
     <div className="footer">
-      <a href="#" onClick={props.showInformation} className={`align-left ${props.spanClass}`}>Information</a>
-      <a href="#" onClick={props.showIndex}className={`align-right ${props.spanClass}`}>Index</a>
+      <a onClick={props.showInformation} className={`align-left ${props.spanClass}`}>Information</a>
+      <a href="https://www.instagram.com/florenceltf/" className={`align-right ${props.spanClass}`}>Follow</a>
     </div>
   );
 };

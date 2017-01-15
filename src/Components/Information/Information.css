@@ -21,3 +21,7 @@
   border-bottom: 4px solid white;
   color: transparent;
 }
+
+.information p {
+  font-size: 26px;
+}

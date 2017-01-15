@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ImagesArray from './images';
-
 import './Gallery.css';
+
 /**
  * This is a dumb component, however it needs a state
  * since it will be changeing every x seconds.
