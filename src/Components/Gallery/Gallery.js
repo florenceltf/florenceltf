@@ -27,7 +27,7 @@ class Gallery extends Component {
     const self = this;
     setTimeout(() => {
       self.poll(); // do it once and then start it up ...
-      self.timer = setInterval(self.poll.bind(self), 5000);
+      self.timer = setInterval(self.poll.bind(self), 500);
     }, 1000);
   }
 
