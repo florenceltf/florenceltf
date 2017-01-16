@@ -1,7 +1,5 @@
-import Image1 from './THUMB_1.JPG';
-import Image2 from './THUMB_2.JPG';
-import Image3 from './THUMB_3.JPG';
-import Image4 from './THUMB_4.JPG';
-// import Image5 from './THUMB_5.JPG';
+import Image1 from './1.jpg';
+import Image2 from './2.jpg';
+import Image3 from './3.jpg';
 
-export default [Image1, Image2, Image3, Image4/*, Image5*/];
+export default [Image1, Image2, Image3];
