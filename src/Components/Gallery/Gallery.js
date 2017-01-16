@@ -11,7 +11,10 @@ class Gallery extends Component {
     super(props, context);
     this.state = {
       imageIndex: 0,
-      images: ImagesArray,
+      images: [
+        'https://s3-ap-southeast-2.amazonaws.com/florenceltfbucket/1.jpg',
+        'https://s3-ap-southeast-2.amazonaws.com/florenceltfbucket/2.jpg',
+        'https://s3-ap-southeast-2.amazonaws.com/florenceltfbucket/3.jpg'],
     };
   }
 
