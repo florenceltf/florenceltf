@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AspectRatio from 'react-aspect-ratio';
 
 class Gallery extends Component {
     constructor(props) {

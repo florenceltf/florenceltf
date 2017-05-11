@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Gallery from '../components/Gallery';
+import { styleLight } from '../actions';
 
-const GalleryContainer = (props) => (
-        <Gallery {...props} />
-);
+class GalleryContainer extends Component {
+    componentDidMount() {
+        this.props.onLoad()
+    }
+    
+    render() {
+        const props = this.props;
+        return (
+                <Gallery {...props} />
+        );
+    }
+}
 
 const mapStateToProps = (state) => {
-    const { gallery } = state;
+    const { gallery, style } = state;
     return {
-        ...gallery
+        ...gallery,
+        style
     }
 };
 
-export default connect(mapStateToProps)(GalleryContainer);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onLoad: () => dispatch(styleLight())
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(GalleryContainer);

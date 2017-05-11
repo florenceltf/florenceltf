@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
+import { STYLE_LIGHT, STYLE_DARK } from './actions';
+
 const initialInfo = {
     content: "Hi I'm Flo Flo"
 }
@@ -25,9 +27,24 @@ function gallery(state = initialGallery, action) {
     return state;
 }
 
+const LIGHT = "light";
+const DARK = "dark";
+
+function style(state = "light", action) {
+    switch(action) {
+    case STYLE_LIGHT:
+        return LIGHT;
+    case STYLE_DARK:
+        return DARK;
+    default:
+        return state;
+    }
+}
+
 const rootReducer = combineReducers({
     info,
     gallery,
+    style,
 });
 
 export default rootReducer;

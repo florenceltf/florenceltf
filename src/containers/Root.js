@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import configureStore from '../configureStore';
 import {
-    HashRouter as Router,
+    BrowserRouter as Router,
     Route,
 } from 'react-router-dom';
 
