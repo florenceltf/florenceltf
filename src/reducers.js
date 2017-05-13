@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { STYLE_LIGHT, STYLE_DARK } from './actions';
 
 const initialInfo = {
-    content: "Hi I'm Flo Flo"
+    content: "Hi I'm Flo Flo!!!"
 }
 
 function info(state = initialInfo, action) {
