@@ -30,11 +30,13 @@ function gallery(state = initialGallery, action) {
 const LIGHT = "light";
 const DARK = "dark";
 
-function style(state = "light", action) {
-    switch(action) {
+function style(state = LIGHT, action) {
+    switch(action.type) {
     case STYLE_LIGHT:
+        console.log(STYLE_LIGHT)
         return LIGHT;
     case STYLE_DARK:
+        console.log(STYLE_DARK)
         return DARK;
     default:
         return state;
