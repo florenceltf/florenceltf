@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import Title from '../components/Title';
 import Navigation from '../components/Navigation';
 
-const Layout = (props) => {
-    const children = props.children
+const Layout = ({children, style}) => {
     return (
-        <div className={"Layout"}>
+        <div className={"Layout " + style}>
         <Title />
         <Navigation />
             {children}
@@ -15,4 +15,13 @@ const Layout = (props) => {
     )
 };
 
-export default Layout;
+const mapStateToProps = (state, ownProps) => {
+    const { style } = state;
+    const props =  {
+        ...ownProps,
+        style
+    };
+    return props;
+};
+
+export default withRouter(connect(mapStateToProps)(Layout));
