@@ -8,8 +8,10 @@ import Navigation from '../components/Navigation';
 const Layout = ({children, style}) => {
     return (
         <div className={"Layout " + style}>
+        <div className="Header">
         <Title />
         <Navigation />
+        </div>
             {children}
         </div>
     )

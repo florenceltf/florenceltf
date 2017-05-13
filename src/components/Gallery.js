@@ -30,7 +30,7 @@ class Gallery extends Component {
         const image = content[this.state.index];
 
         return (
-                <div className="GalleryContainer">
+                <div className="Gallery">
                 <div className="counter">{this.getCounter()}</div>
                 <img
             src={image.src}
