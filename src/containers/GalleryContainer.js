@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import $ from 'jquery';
 
 import Gallery from '../components/Gallery';
 import { styleLight } from '../actions';
@@ -27,7 +28,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onLoad: () => dispatch(styleLight())
+        onLoad: () => {
+            $('body').addClass('light').removeClass('dark');
+            return dispatch(styleLight())
+        }
     }
 }
 
