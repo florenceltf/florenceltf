@@ -50,11 +50,13 @@ class Gallery extends Component {
         return (
                 <div className="Gallery">
                 <div className="counter">{this.getCounter()}</div>
+                <div className="slideshow">
                 <img
             src={image.src}
             alt={image.title}
             onClick={this.onClick.bind(this)}
                 />
+                </div>
                 </div>
         )
     };

@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
+  min-height: 100%;
 }
 
 .Layout, .root, body {
@@ -22,12 +22,20 @@ body {
 .Layout.dark {
   background: black;
   color: white;
+  min-height: 100%;
 }
 
 .Header {
   overflow: hidden;
   padding-left: 10px;
   }
+
+  ::selection {
+  background: #000000; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #000000; /* Gecko Browsers */
+}
 
 
 div.Title {
@@ -55,6 +63,7 @@ div.Navigation a {
 
 .Layout.dark div.Navigation a {
   color: white;
+  pointer-events: none;
 }
 
 .Layout.dark div.Navigation a:hover {
@@ -71,17 +80,17 @@ div.Navigation a {
   max-height: 80%;
   overflow: hidden;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
+
 }
 
-.Gallery img {
-  float: left;
-  width: 80%;
-  padding-left: 10px;
-  padding-bottom: 10px;
- 
+.Gallery .slideshow img{
+  max-width: 800px;
+padding-left:10px;
+padding-right:10px;
 }
+
 
 div.counter {
   text-align: right;
@@ -104,6 +113,13 @@ div.InfoContainer {
   max-height: 100%;
   font-size: 24px;
   }
+
+  ::selection {
+  background: #fff; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #fff; /* Gecko Browsers */
+}
 
 div.exit {
   overflow: hidden;
@@ -164,22 +180,90 @@ div.exit a:hover {
 
   /* Mobile */
 
-  @media only screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) and
+  (orientation:portrait) 
+    {
+  
+
     div.Title {
     width: 100%;
     }
 
-    div.Navigation {
+div.Navigation {
+  position: absolute;
+  left: 10px;
+  float: left;
+  bottom: 10px;
+  }
+
+.Gallery {
+  width: 100%;
+  height: 100%;
     position: absolute;
-    float: left;
-    width: 50%;
-    bottom:0;
-    padding-left: 10px;
-    }
+    vertical-align: middle;
+    pointer-events: none;
+    right:10px;    
 
-    div.counter{
-    width:50%;
-    float: right;
-
-    }
 }
+
+.Gallery .slideshow {
+  padding-top: 60px;
+  width: 100%; 
+    pointer-events: all;
+    overflow: hidden;
+
+}
+
+.Gallery .slideshow img{
+  width: 100%;
+  margin-left: 10px;
+
+}
+
+div.counter {
+  text-align: right;
+  float: right;
+  font-size: 24px;
+    padding-right: 0px;
+    width: 50%;
+    bottom: 0px;
+    right: 0px;
+      overflow: hidden;
+  position: absolute;
+  }
+
+  div.content {
+  width: 90%;
+  float: left;
+  padding-left: 10px;
+  }
+
+  div.contact{
+  position: relative;
+  left: 0%;
+  float: left;
+  padding-left: 10px;
+  padding-top: 30px;
+  padding-bottom: 3px;
+
+  }
+
+  .Layout.dark div.Navigation {
+    display: none;
+  }
+
+    }
+
+      @media screen and (max-width: 700px) and
+  (orientation:landscape) 
+    {
+
+      div.exit{
+        float: right;
+        position: relative;
+        right: 0;
+      }
+
+
+
+    }
