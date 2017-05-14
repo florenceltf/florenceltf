@@ -3,7 +3,8 @@ import { combineReducers } from 'redux';
 import { STYLE_LIGHT, STYLE_DARK } from './actions';
 
 const initialInfo = {
-    content: "is a communications designer based in Melbourne Australia, currently working at Studio Round."
+    content: "is a <br/>communications designer based in Melbourne Australia, currently working at <a href=\"http://www.round.com.au\">Studio Round</a>.",
+    contact: "Hello this<br /> is the contact div."
 }
 
 function info(state = initialInfo, action) {
