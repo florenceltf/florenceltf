@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const INTERVAL = 2000;
+
 class Gallery extends Component {
     constructor(props) {
         super(props);
@@ -8,7 +10,23 @@ class Gallery extends Component {
         };
     }
 
+    componentDidMount() {
+        this.interval = setInterval(this.tick.bind(this), INTERVAL)
+    }
+    
+    componentWillUnmount() {
+        clearInterval(this.interval)
+    }
+
+    tick() {
+        this.nextImage();
+    }
+
     onClick() {
+        this.nextImage();
+    }
+
+    nextImage() {
         const state = this.state;
         const index = state.index;
         const len = this.props.content.length;
