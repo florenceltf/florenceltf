@@ -3,8 +3,13 @@ import { combineReducers } from 'redux';
 import { STYLE_LIGHT, STYLE_DARK } from './actions';
 
 const initialInfo = {
-    content: "is a <br/>communications designer based in Melbourne Australia, currently working at <a href=\"http://www.round.com.au\">Studio Round</a>.",
-    contact: "Hello this<br /> is the contact div."
+    content: "is a communications designer based in Melbourne Australia, currently working " + 
+    "at <a href=\"http://www.round.com.au\">Studio Round</a>. " + 
+    " <br/><br/> For any portfolio or freelance enquiries, please <a href=\"mailto:florenceltf@gmail.com\">email</a>. " +
+    " For any other enquiries, still please <a href=\"mailto:florenceltf@gmail.com\">email</a>.",
+    contact: "<a href=\"mailto:florenceltf@gmail.com\">Contact</a> " +
+    " <br/><a href=\"http://www.instagram.com.au/florenceltf\">Instagram</a> " +
+    " <br/><a href=\"https://www.linkedin.com/in/florenceltf\">Linkedin</a> "
 }
 
 function info(state = initialInfo, action) {
