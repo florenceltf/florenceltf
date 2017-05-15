@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   min-height: 100%;
 }
 
@@ -11,6 +11,9 @@ body {
   height: 100%;
 }
 
+.Layout {
+  overflow: scroll;
+  }
 
 .Layout.light {
   background: white;
@@ -84,7 +87,7 @@ div.Navigation a {
 }
 
 .Gallery .slideshow img{
-  max-width: 800px;
+  max-width: 650px;
 padding-left:10px;
 padding-right:10px;
 }
@@ -110,6 +113,7 @@ div.InfoContainer {
   width: 100%;
   max-height: 100%;
   font-size: 24px;
+  padding-bottom: 10px;
   }
 
   ::selection {
@@ -175,7 +179,10 @@ div.contact a:hover {
 @media screen and (max-width: 700px) and
 (orientation:portrait) 
     {
-
+.Layout {
+  overflow: scroll;
+  }
+  
 div.Title {
   width: 100%;
   }
@@ -185,6 +192,7 @@ div.Navigation {
   left: 10px;
   float: left;
   bottom: 10px;
+  padding-top: 20px;
   }
   
 .Gallery {
@@ -197,7 +205,6 @@ div.Navigation {
   }
 
 .Gallery .slideshow {
-  padding-top: 60px;
   width: 100%; 
   pointer-events: all;
   overflow: hidden;
@@ -206,6 +213,10 @@ div.Navigation {
 .Gallery .slideshow img{
   width: 100%;
   margin-left: 10px;
+  position:absolute;
+  top:0;
+  bottom: 0;
+  margin:auto;
   }
 
 div.counter {
@@ -218,6 +229,7 @@ div.counter {
   right: 0px;
   overflow: hidden;
   position: absolute;
+  padding-top: 20px;
   }
 
 div.content {
@@ -245,11 +257,23 @@ div.contact{
   display: none;
   }
 
+  div.infoContainer{
+    padding-bottom: 10px;
+  }
+
+@media screen and (max-width: 700px) and (orientation: portrait)
+
+.Gallery .slideshow {
+    padding-top: 0px;
+}
+
+
 @media screen and (max-width: 700px) and
 (orientation:landscape) {
   
 div.exit{
   display: none;
+  padding-bottom: 10px;
   }
 
 .Navigation {
@@ -257,7 +281,7 @@ div.exit{
   }
 
 .Layout.dark div.Navigation .back {
-  pointer-events: all;
+  pointer-events: none;
   display: inline;
   float: right;
   padding-right:10px;
@@ -267,12 +291,9 @@ div.exit{
   overflow: scroll;
   }
 
-.Layout.dark div.Navigation a:hover {
-  color: white;
-  border-bottom: 0px solid white;
-  }
-
 div.InfoContainer {
   padding-bottom: 20px;
   }
+
+
 }

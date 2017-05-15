@@ -3,12 +3,12 @@ import { combineReducers } from 'redux';
 import { STYLE_LIGHT, STYLE_DARK } from './actions';
 
 const initialInfo = {
-    content: "is a communications designer based in Melbourne Australia, currently working " + 
-    "at <a href=\"http://www.round.com.au\">Studio Round</a>. " + 
+    content: "is a communications designer based in Melbourne Australia.  " + 
+    "Currently working at <a href=\"http://www.round.com.au\">Studio Round</a>. " + 
     " <br/><br/> For any portfolio or freelance enquiries, please <a href=\"mailto:florenceltf@gmail.com\">email</a>. " +
     " For any other enquiries, still please <a href=\"mailto:florenceltf@gmail.com\">email</a>.",
     contact: "<a href=\"mailto:florenceltf@gmail.com\">Contact</a> " +
-    " <br/><a href=\"http://www.instagram.com.au/florenceltf\">Instagram</a> " +
+    " <br/><a href=\"http://www.instagram.com/florenceltf\">Instagram</a> " +
     " <br/><a href=\"https://www.linkedin.com/in/florenceltf\">Linkedin</a> "
 }
 
@@ -19,12 +19,8 @@ function info(state = initialInfo, action) {
 const initialGallery = {
     content: [
         {
-            src: "https://i.giphy.com/WiXMlla4ZFR8Q.gif",
-            title: "Flo flo the bunny"
-        },
-        {
-            src: "https://i.giphy.com/VAzhi9GfotTXy.gif",
-            title: "I get excited sometimes..."
+            src: "https://s3-ap-southeast-2.amazonaws.com/florenceltfbucket/Supernormal.jpg",
+            title: "Supernormal Cookbook"
         }
     ]
 }
