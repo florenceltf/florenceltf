@@ -13,6 +13,7 @@ body {
 
 .Layout {
   overflow: scroll;
+
   }
 
 .Layout.light {
@@ -181,6 +182,7 @@ div.contact a:hover {
     {
 .Layout {
   overflow: scroll;
+
   }
   
 div.Title {
@@ -208,6 +210,7 @@ div.Navigation {
   width: 100%; 
   pointer-events: all;
   overflow: hidden;
+
   }
 
 .Gallery .slideshow img{
@@ -259,8 +262,14 @@ div.contact{
   display: none;
   }
 
-  div.infoContainer{
-    padding-bottom: 10px;
+div.infoContainer{
+  padding-bottom: 10px;
+  overflow: scroll;
+  }
+
+div.exit{
+  position: fixed;
+  bottom: 10px;
   }
 
 @media screen and (max-width: 700px) and (orientation: portrait)
@@ -269,6 +278,10 @@ div.contact{
     padding-top: 0px;
 }
 
+div.exit{
+  position: fixed;
+  bottom: 10px;
+  }
 
 @media screen and (max-width: 700px) and
 (orientation:landscape) {
@@ -291,6 +304,8 @@ div.exit{
 
 .Layout {
   overflow: scroll;
+      padding-bottom: 200px
+
   }
 
 div.InfoContainer {
