@@ -4,9 +4,15 @@ import Link from 'gatsby-link'
 
 import './index.css'
 
+import Header from '../components/Header';
+
 const TemplateWrapper = ({ children }) => (
-  <div className="Template">
+  <div className="Layout">
+    <Header />
     {children()}
+    <Link to="/gallery">Gallery</Link>
+    <br />
+    <Link to="/info">info</Link>
   </div>
 )
 

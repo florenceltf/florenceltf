@@ -1,3 +1,19 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  overflow:auto;
+}
+
+::selection {
+  background: blue; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: blue; /* Gecko Browsers */
+}
+
 .Gallery {
   display: flex;
   flex-wrap: wrap;

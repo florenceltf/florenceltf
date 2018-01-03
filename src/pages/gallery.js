@@ -9,12 +9,12 @@ const GalleryPage = ({ data }) => {
   return (
     <div className="Gallery">
       {
-        images.map((image) =>
-          <span className="GalleryImage">
+        images.map((image, index) =>
+          <Link className="GalleryImage" to={`/${index}`}>
             <Img
               resolutions={get(image, 'node.childImageSharp.resolutions')}
             />
-          </span>
+          </Link>
         )
       }
     </div>
