@@ -5,7 +5,12 @@
   "author": "Eamon Taaffe <eamontaaffe@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.145",
-    "gatsby-link": "^1.6.32"
+    "gatsby-image": "^1.0.31",
+    "gatsby-link": "^1.6.32",
+    "gatsby-plugin-sharp": "^1.6.24",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-sharp": "^1.6.16",
+    "lodash.get": "^4.4.2"
   },
   "keywords": [
     "gatsby"

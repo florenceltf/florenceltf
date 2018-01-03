@@ -1,0 +1,11 @@
+.Gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-content: flex-start;
+}
+
+.GalleryImage {
+  margin: 16px;
+  display: inline-block;
+}
