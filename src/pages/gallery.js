@@ -36,7 +36,7 @@ export const pageQuery = graphql`
           modifiedTime
           sourceInstanceName
           childImageSharp {
-            resolutions(width: 240, height: 240, cropFocus: CENTER) {
+            resolutions(width: 360, height: 240, cropFocus: CENTER) {
               ...GatsbyImageSharpResolutions
             }
           }

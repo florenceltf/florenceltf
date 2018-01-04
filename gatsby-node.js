@@ -9,7 +9,14 @@
 const path = require('path');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+  const { createPage, createRedirect } = boundActionCreators;
+
+  createRedirect({
+    fromPath: '/',
+    isPermanent: true,
+    toPath: '/0',
+    redirectInBrowser: true,
+  });
 
   const slideshowTemplate = path.resolve('src/templates/slideshow.js');
 

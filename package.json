@@ -20,6 +20,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "deploy:beta": "gatsby build --prefix-paths && gh-pages -d public --remote beta"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }

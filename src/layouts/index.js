@@ -6,13 +6,21 @@ import './index.css'
 
 import Header from '../components/Header';
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div className="Layout">
-    <Header />
+    <div className="Header">
+      <div className="title">
+        <Link to="/">
+          {data.site.siteMetadata.title}
+        </Link>
+      </div>
+      <div className="info">
+        <Link to="/info">
+          Information
+        </Link>
+      </div>
+    </div>
     {children()}
-    <Link to="/gallery">Gallery</Link>
-    <br />
-    <Link to="/info">info</Link>
   </div>
 )
 
@@ -20,4 +28,13 @@ TemplateWrapper.propTypes = {
   children: PropTypes.func,
 }
 
-export default TemplateWrapper
+export default TemplateWrapper;
+
+export const query = graphql`
+query TemplateQuery {
+  site {
+    siteMetadata {
+      title
+    }
+  }
+}`;
