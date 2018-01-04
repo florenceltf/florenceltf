@@ -34,7 +34,7 @@ div {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 16px;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 }
 
 .Header {
@@ -66,6 +66,7 @@ div {
 }
 
 .GalleryImage {
-  margin: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
   display: inline-block;
 }
