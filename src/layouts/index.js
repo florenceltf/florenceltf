@@ -10,9 +10,7 @@ const TemplateWrapper = ({ children, data }) => (
   <div className="Layout">
     <div className="Header">
       <div className="title">
-        <Link to="/">
           {data.site.siteMetadata.title}
-        </Link>
       </div>
       <div className="info">
         <Link to="/info">
