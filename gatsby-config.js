@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/gatsby-flo',
   siteMetadata: {
     title: `Florence Li Ting Fong`,
   },
@@ -12,6 +13,5 @@ module.exports = {
         path: `${__dirname}/src/gallery`,
       },
     },
-  ],
-  pathPrefix: '/gatsby-flo',
+  ]
 }
