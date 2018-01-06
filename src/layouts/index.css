@@ -44,7 +44,7 @@ div {
 
 .Header {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 30px;
 }
 
@@ -109,7 +109,7 @@ div {
 
 .Info {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto min-content;
   grid-column-gap: 30px;
 }
