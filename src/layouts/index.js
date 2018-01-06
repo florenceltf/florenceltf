@@ -22,9 +22,11 @@ const TemplateWrapper = ({ children, data, location: { pathname } }) => (
         {data.site.siteMetadata.title}
       </div>
       <div className="info">
-        <Link to="/info">
-          Information
-        </Link>
+        {pathname === '/info' ? null :
+         <Link to="/info">
+           Information
+         </Link>
+        }
       </div>
     </div>
     {children()}

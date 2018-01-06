@@ -8,11 +8,11 @@
 - [x] Order the images
 
 #### Information page
-- [ ] Remove clickable link of ‘Information’
+- [x] Remove clickable link of ‘Information’
 - [x] Invert colors
 
 #### Projects page
-- [ ] Change links name to ‘projects’
+- [x] Change links name to ‘projects’
 - [ ] Remove ‘Florence Li Ting Fong’ and ‘Information’
 - [ ] Add captions underneath, centred
 - [ ] Add back button at bottom of screen as per ‘Info’ page

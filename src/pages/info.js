@@ -10,7 +10,7 @@ export default function InfoPage() {
     </div>
 
       <div className="right">
-      <a href="/gallery">Projects</a>
+      <a href="/projects">Projects</a>
         <br></br>
         —
         <br></br>
