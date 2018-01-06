@@ -6,11 +6,20 @@ import './index.css'
 
 import Header from '../components/Header';
 
-const TemplateWrapper = ({ children, data }) => (
-  <div className="Layout">
+function getClassForPath(pathname) {
+  switch (pathname) {
+    case '/info':
+      return 'inverted';
+    default:
+      return '';
+  }
+}
+
+const TemplateWrapper = ({ children, data, location: { pathname } }) => (
+  <div className={`Layout ${getClassForPath(pathname)}`}>
     <div className="Header">
       <div className="title">
-          {data.site.siteMetadata.title}
+        {data.site.siteMetadata.title}
       </div>
       <div className="info">
         <Link to="/info">

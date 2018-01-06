@@ -37,6 +37,11 @@ div {
   padding-bottom: 16px;
 }
 
+.Layout.inverted {
+  background-color: black;
+  color: white;
+}
+
 .Header {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -77,13 +82,25 @@ div {
   text-decoration: none;
 }
 
+.Layout.inverted .Header a, .Layout.inverted .Info a {
+  color: white;
+}
+
 .Header a:hover, .Info a:hover{
   color: transparent;
   border-bottom: 2px solid black;
 }
 
+.Layout.inverted .Header a:hover, .Layout.inverted .Info a:hover{
+  border-bottom: 2px solid white;
+}
+
 .Header a:visited, .Info a:visited{
   color: black;
+}
+
+.Layout.inverted .Header a:visited, .Layout.inverted .Info a:visited{
+  color: white;
 }
 
 .Header .title {

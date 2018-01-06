@@ -9,6 +9,7 @@
 
 #### Information page
 - [ ] Remove clickable link of ‘Information’
+- [x] Invert colors
 
 #### Projects page
 - [ ] Change links name to ‘projects’
