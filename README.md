@@ -1,5 +1,13 @@
 # gatsby-starter-default
 
+## Running it
+
+```
+cd /path-to-project/
+npm install # This installs all the required bits
+npm develop # This starts the development server
+npm run deploy:beta # This deploys to the beta server
+```
 
 ### Desktop
 
