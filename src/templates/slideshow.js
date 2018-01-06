@@ -42,7 +42,12 @@ export const pageQuery = graphql`
       edges {
         node {
           childImageSharp {
-            resolutions(width: 650, height: 433, cropFocus: CENTER) {
+            resolutions(
+              width: 650,
+              height: 433,
+              cropFocus: CENTER,
+              quality: 100
+            ) {
               ...GatsbyImageSharpResolutions
             }
           }

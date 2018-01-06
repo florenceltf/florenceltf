@@ -22,7 +22,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   return graphql(`
   {
-    allFile(filter: {sourceInstanceName: {eq: "gallery"}}) {
+    allFile(
+      filter: {sourceInstanceName: {eq: "gallery"}},
+      sort: {order: ASC, fields: [id]}
+    ) {
       edges {
         node {
           id

@@ -28,7 +28,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allFile(filter: {sourceInstanceName: {eq: "gallery"}}) {
+    allFile(
+      filter: {sourceInstanceName: {eq: "gallery"}},
+      sort: {order: ASC, fields: [id]}
+    ) {
       edges {
         node {
           extension
@@ -36,7 +39,12 @@ export const pageQuery = graphql`
           modifiedTime
           sourceInstanceName
           childImageSharp {
-            resolutions(width: 360, height: 240, cropFocus: CENTER) {
+            resolutions(
+              width: 360,
+              height: 240,
+              cropFocus: CENTER,
+              quality: 100
+            ) {
               ...GatsbyImageSharpResolutions
             }
           }
