@@ -19,6 +19,22 @@ npm run deploy:beta # This deploys to the beta server
 - [x] Remove clickable link of ‘Information’
 - [x] Invert colors
 
+### Mobile (Portrait)
+
+#### Home page
+- [x] Pixelated images
+- [ ] Centre image vertically
+- [x] Information link to appear bottom left
+
+### Mobile (Landscape)
+
+- [ ] Home page to be information page only
+- [ ] Make background black
+
+##################### Not as important #####################
+
+### Desktop
+
 #### Projects page
 - [x] Change links name to ‘projects’
 - [ ] Remove ‘Florence Li Ting Fong’ and ‘Information’
@@ -27,20 +43,6 @@ npm run deploy:beta # This deploys to the beta server
 
 ### Mobile (Portrait)
 
-#### Home page
-- [x] Pixelated images
-- [ ] Centre image vertically
-- [ ] Information link to appear bottom left
-
 #### Projects page
 - [ ] Same as per desktop
 - [ ] Images to be 100% width
-
-### Mobile (Landscape)
-
-#### To be information page
-- [ ] Page to scroll (as opposed to current fixed header and footer)
-
-#### Projects page
-- [ ] Same as per desktop
-- [ ] 2 x projects up in a row

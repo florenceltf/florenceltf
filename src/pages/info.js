@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 export default function InfoPage() {
   return (
     <div className="Info">
-      <div className="left">is a Melbourne-born communications designer taking time off to eat, drink and nap <a href="http://holidaze.florenceltf.com/">somewhere in the world</a>. Currently freelancing abroad with <a href="https://www.round.com.au">Studio Round</a>. 
+      <div className="left">is a Melbourne-born communications designer taking time off to eat, drink and nap <a href="http://holidaze.florenceltf.com/">around the world</a>. Currently freelancing abroad with <a href="https://www.round.com.au">Studio Round</a>. 
       <br></br><br></br>
       For any portfolio or freelance enquiries, please <a href="mailto:florenceltf@gmail.com">email</a>. For any other enquiries, still please <a href="mailto:florenceltf@gmail.com">email</a>.
     </div>

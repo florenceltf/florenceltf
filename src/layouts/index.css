@@ -120,7 +120,11 @@ div {
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 510px) and (min-width: 315px) and (orientation: portrait) {
+
+  .Layout.inverted .info{
+    display: none;
+  }
 
   .Info {
     display: inline-block;    
@@ -133,14 +137,18 @@ div {
 
   .right {
     padding-top: 24px;
+    padding-bottom: 2px;
   }
 
   .Header {
     display: inline-block;
   }
 
-  .Header .info{
-    display: none;
+  .Header .info {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    padding-bottom: 2px;
   }
 
   .Slideshow {
@@ -159,4 +167,30 @@ div {
     vertical-align: middl
   }
   
+}
+
+@media screen and (max-width: 315px) and (orientation: portrait) {
+
+  .Layout {
+    position: relative;
+  }
+
+  .Back {
+    padding-top: 24px;
+    bottom: 16px;
+  }
+
+}  
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+
+  .Layout {
+    position: relative;
+  }
+
+  .Back {
+    padding-top: 24px;
+    bottom: 16px;
+  }
+
 }

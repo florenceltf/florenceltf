@@ -44,6 +44,7 @@ export const pageQuery = graphql`
           childImageSharp {
             resolutions (
               width: 650,
+              height: 433,
               quality: 100,
             ) {
               ...GatsbyImageSharpResolutions
