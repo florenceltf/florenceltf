@@ -10,10 +10,6 @@ export default function InfoPage() {
     </div>
 
       <div className="right">
-      <a href="/projects">Projects</a>
-        <br></br>
-        —
-        <br></br>
         <a href="http://holidaze.florenceltf.com/">News</a>
         <br></br>
         <a href="https://www.instagram.com/florenceltf">Instagram</a>
@@ -25,7 +21,7 @@ export default function InfoPage() {
       </div>
       <div className="Back">
       <Link to="/0">
-        Back &#8617; 
+        Back &#8617;
         </Link>
       </div>
     </div>
