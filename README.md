@@ -23,13 +23,13 @@ npm run deploy:beta # This deploys to the beta server
 
 #### Home page
 - [x] Pixelated images
-- [ ] Centre image vertically
+- [x] Centre image vertically
 - [x] Information link to appear bottom left
 
 ### Mobile (Landscape)
 
 - [ ] Home page to be information page only
-- [ ] Make background black
+- [x] Make background black
 
 ##################### Not as important #####################
 

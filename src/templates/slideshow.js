@@ -17,14 +17,14 @@ function nextLink(index, length) {
 }
 
 function SlideshowTemplate({ data, pathContext: { index, length } }) {
-  const resolutions =
-    get(data, 'allFile.edges[0].node.childImageSharp.resolutions');
+  const sizes =
+    get(data, 'allFile.edges[0].node.childImageSharp.sizes');
 
   return(
     <div className="Slideshow">
       <div className="item">
         <Link to={nextLink(index, length)}>
-          <Img resolutions={resolutions} />
+          <Img sizes={sizes} />
         </Link>
       </div>
       <div className="index">
@@ -42,12 +42,10 @@ export const pageQuery = graphql`
       edges {
         node {
           childImageSharp {
-            resolutions (
-              width: 650,
-              height: 433,
-              quality: 100,
+            sizes (
+              quality: 100
             ) {
-              ...GatsbyImageSharpResolutions
+              ...GatsbyImageSharpSizes
             }
           }
         }
