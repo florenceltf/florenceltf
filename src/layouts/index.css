@@ -6,6 +6,7 @@ html, body, #___gatsby {
   font-family: sans-serif;
   overflow:auto;
   font-size: 24px;
+  line-height: 30px;
 }
 
 ::selection {
@@ -58,6 +59,9 @@ div {
 .Slideshow .item {
   grid-row-start: 2;
   overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .Slideshow .index {
@@ -66,7 +70,7 @@ div {
 }
 
 .Slideshow .item .gatsby-image-wrapper {
-    max-height: 433px;
+    max-height: 440px;
     max-width: 600px;
 }
 
