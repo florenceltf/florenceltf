@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: '/gatsby-flo',
   siteMetadata: {
     title: `Florence Li Ting Fong`,
   },
