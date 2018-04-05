@@ -1,3 +1,5 @@
+@import "../stylesheets/neat/_neat.scss";
+
 html, body, #___gatsby {
   margin: 0;
   padding: 0;
@@ -43,10 +45,23 @@ div {
   color: white;
 }
 
+$Header-grid: (
+  columns: 2,
+  gutter: 20px,
+);
+
 .Header {
-  display: grid;
+  @include grid-container;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 30px;
+}
+
+.Header .info {
+  @include grid-column(1, $Header-grid);
+}
+
+.Header .title {
+  @include grid-column(1, $Header-grid);
 }
 
 .Slideshow {

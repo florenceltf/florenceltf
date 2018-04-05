@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
-import './index.css'
+import './index.scss'
 
 import Header from '../components/Header';
 
