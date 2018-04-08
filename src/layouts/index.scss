@@ -40,7 +40,7 @@ $gutter-margin: 8px;
 }
 
 @mixin padding-to-display-underline() {
-  margin-bottom: 1px;
+  padding-bottom: 2px;
   overflow: visible;
 }
 
@@ -147,7 +147,7 @@ div {
     justify-content: space-between;
 
     .CounterContainer {
-      flex: 1;
+      flex: 3;
     }
 
     .Counter {
@@ -155,8 +155,7 @@ div {
     }
 
     .Slideshow {
-      flex: 2;
-      background-color: lightblue;
+      flex: 5;
 
       img.gatsby-image-wrapper {
         object-fit: contain;
@@ -196,6 +195,7 @@ div {
   }
 
   .Header {
+    @include padding-to-display-underline;
     display: flex;
     justify-content: space-between;
 
@@ -218,11 +218,13 @@ div {
     justify-content: space-between;
 
     .Left {
+      @include padding-to-display-underline;
       flex: 1;
       margin-right: $gutter-margin;
     }
 
     .Right {
+      @include padding-to-display-underline;
       flex: 1;
       margin-left: $gutter-margin;
     }
