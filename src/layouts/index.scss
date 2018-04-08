@@ -71,11 +71,6 @@ div {
   @include full-screen;
 }
 
-.Layout.inverted {
-  background-color: black;
-  color: white;
-}
-
 .SlideshowMobileTemplate {
   @include full-screen-with-padding;
   display: flex;
@@ -162,6 +157,12 @@ div {
       }
     }
   }
+}
+
+.InfoPage {
+  @include full-screen;
+  background-color: black;
+  color: white;
 }
 
 .InfoPageMobile {

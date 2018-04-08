@@ -66,13 +66,15 @@ function InfoPageDesktop({ data }) {
 
 export default function InfoPage(props) {
   return (
-    <MediaQuery maxDeviceWidth={MOBILE_MAX_DEVICE_WIDTH}>
-      {matches => (
-        matches ?
-        <InfoPageMobile {...props} /> :
-        <InfoPageDesktop {...props} />
-      )}
-    </MediaQuery>
+    <div className="InfoPage">
+      <MediaQuery maxDeviceWidth={MOBILE_MAX_DEVICE_WIDTH}>
+        {matches => (
+          matches ?
+          <InfoPageMobile {...props} /> :
+          <InfoPageDesktop {...props} />
+        )}
+      </MediaQuery>
+    </div>
   );
 }
 
