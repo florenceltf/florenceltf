@@ -1,12 +1,54 @@
-@import "../stylesheets/neat/_neat.scss";
+// @import "../stylesheets/neat/_neat.scss";
 
-html, body, #___gatsby {
+// Constants
+
+$border-padding: 16px;
+$gutter-margin: 8px;
+
+// Mixins
+
+@mixin full-screen() {
+  height: 100vh;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+}
+
+@mixin full-screen-with-padding() {
+  position: absolute;
+  left: $border-padding;
+  right: $border-padding;
+  top: $border-padding;
+  bottom: $border-padding;
+}
+
+@mixin link($inverted: false) {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    color: transparent;
+    border-bottom: 2px solid black;
+  }
+
+  @if $inverted == true {
+    color: white;
+
+    &:hover {
+      border-bottom-color: white;
+    }
+  }
+}
+
+@mixin padding-to-display-underline() {
+  margin-bottom: 1px;
+  overflow: visible;
+}
+
+// Styles
+
+html, body, #___gatsby {
+  @include full-screen;
   font-family: sans-serif;
-  overflow:auto;
   font-size: 24px;
   line-height: 30px;
 }
@@ -26,18 +68,7 @@ div {
 }
 
 .Layout {
-  display: grid;
-  grid-template-rows: min-content auto;
-  position:absolute;
-  height:auto;
-  bottom:0;
-  top:0;
-  left:0;
-  right:0;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  @include full-screen;
 }
 
 .Layout.inverted {
@@ -45,178 +76,155 @@ div {
   color: white;
 }
 
-$Header-grid: (
-  columns: 2,
-  gutter: 20px,
-);
-
-.Header {
-  @include grid-container;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 30px;
-}
-
-.Header .info {
-  @include grid-column(1, $Header-grid);
-}
-
-.Header .title {
-  @include grid-column(1, $Header-grid);
-}
-
-.Slideshow {
-  display: grid;
-  grid-template-columns: auto 40px;
-  grid-template-rows: auto 440px;;
-  height: auto;
-}
-
-.Slideshow .item {
-  grid-row-start: 2;
-  overflow: hidden;
+.SlideshowMobileTemplate {
+  @include full-screen-with-padding;
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
-}
-
-.Slideshow .index {
-  text-align: right;
-  grid-row-start: 2;
-}
-
-.Slideshow .item .gatsby-image-wrapper {
-    max-height: 440px;
-    max-width: 600px;
-}
-
-.Gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
-  padding-top: 16px;
-}
-
-.GalleryImage {
-  margin-bottom: 16px;
-  display: inline-block;
-}
-
-.Header a, .Info a {
-  color: black;
-  text-decoration: none;
-}
-
-.Layout.inverted .Header a, .Layout.inverted .Info a {
-  color: white;
-}
-
-.Header a:hover, .Info a:hover{
-  color: transparent;
-  border-bottom: 2px solid black;
-}
-
-.Layout.inverted .Header a:hover, .Layout.inverted .Info a:hover{
-  color: transparent;
-    border-bottom: 2px solid white;
-}
-
-.Header a:visited, .Info a:visited{
-  color: black;
-}
-
-.Layout.inverted .Header a:visited, .Layout.inverted .Info a:visited{
-  color: white;
-}
-
-.Header .title {
-  padding-bottom: 2px;
-}
-
-.Info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto min-content;
-  grid-column-gap: 30px;
-}
-
-.Back {
-  padding-bottom: 2px;
-}
-
-
-
-@media screen and (max-width: 510px) and (min-width: 315px) and (orientation: portrait) {
-
-  .Layout.inverted .info{
-    display: none;
-  }
-
-  .Info {
-    display: inline-block;
-  }
-
-  .Back {
-    position: absolute;
-    bottom: 16px;
-  }
-
-  .right {
-    padding-top: 24px;
-    padding-bottom: 2px;
-  }
 
   .Header {
-    display: inline-block;
-  }
-
-  .Header .info {
-    position: absolute;
-    left: 16px;
-    bottom: 14px;
-    padding-bottom: 2px;
-  }
-
-  .index {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
+    @include padding-to-display-underline;
+    height: auto;
+    padding-bottom: 1px;
+    overflow: visible;
   }
 
   .Slideshow {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .gatsby-image-outer-wrapper {
-    width: 100%;
-    height: 100%;
+  .Footer {
+    @include padding-to-display-underline;
+    height: auto;
+
+    .Info {
+      float: left;
+
+      a {
+        @include link;
+      }
+    }
+
+    .Counter {
+      float: right;
+    }
   }
 }
 
-@media screen and (max-width: 315px) and (orientation: portrait) {
+.SlideshowDesktopTemplate {
+  @include full-screen-with-padding;
+  display: flex;
+  flex-direction: column;
 
-  .Layout {
-    position: relative;
+  .Header {
+    @include padding-to-display-underline;
+    height: auto;
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      @include link;
+    }
+
+    .Title {
+      flex: 1;
+    }
+
+    .Info {
+      flex: 1;
+    }
   }
 
-  .Back {
-    padding-top: 24px;
-    bottom: 16px;
+  .Spacer {
+    flex: 1;
   }
 
+  .Content {
+    display: flex;
+    justify-content: space-between;
+
+    .CounterContainer {
+      flex: 1;
+    }
+
+    .Counter {
+      float: right;
+    }
+
+    .Slideshow {
+      flex: 2;
+      background-color: lightblue;
+
+      img.gatsby-image-wrapper {
+        object-fit: contain;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 767px) and (orientation: landscape) {
+.InfoPageMobile {
+  padding: $border-padding;
+  display: flex;
+  flex-direction: column;
 
-  .Layout {
-    position: relative;
+  a {
+      @include link($inverted: true);
+    }
+
+  .Header {
+    @include padding-to-display-underline;
+    height: auto;
+    padding-bottom: 1px;
+    overflow: visible;
   }
 
-  .Back {
-    padding-top: 24px;
-    bottom: 16px;
+  .Links {
+    padding-top: 16px;
+  }
+}
+
+.InfoPageDesktop {
+  @include full-screen-with-padding;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    @include link($inverted: true);
   }
 
+  .Header {
+    display: flex;
+    justify-content: space-between;
+
+    .Title {
+      float: left;
+      flex: 1;
+      margin-right: $gutter-margin;
+    }
+
+    .Info {
+      float: right;
+      flex: 1;
+      margin-left: $gutter-margin;
+    }
+  }
+
+  .Body {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+
+    .Left {
+      flex: 1;
+      margin-right: $gutter-margin;
+    }
+
+    .Right {
+      flex: 1;
+      margin-left: $gutter-margin;
+    }
+  }
 }

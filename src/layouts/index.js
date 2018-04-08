@@ -13,26 +13,8 @@ function getClassForPath(pathname) {
   }
 }
 
-const TemplateWrapper = ({ children, data, location: { pathname }, match: { path } }) => (
+const TemplateWrapper = ({ children, location: { pathname } }) => (
   <div className={`Layout ${getClassForPath(pathname)}`}>
-    <div className="Header">
-      <div className="title">
-        {
-          pathname !== '/info' ? 
-            data.site.siteMetadata.title : 
-            <Link to ="/">{data.site.siteMetadata.title}</Link>
-        }
-      </div>
-      <div className="info">
-        {pathname === '/info' ?
-         'Information'
-         :
-         <Link to="/info">
-           Information
-         </Link>
-        }
-      </div>
-    </div>
     {children()}
   </div>
 )
@@ -42,12 +24,3 @@ TemplateWrapper.propTypes = {
 }
 
 export default TemplateWrapper;
-
-export const query = graphql`
-query TemplateQuery {
-  site {
-    siteMetadata {
-      title
-    }
-  }
-}`;

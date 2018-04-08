@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
-import get from 'lodash.get';
+import MediaQuery from 'react-responsive';
+import _get from 'lodash.get';
+import { MOBILE_MAX_DEVICE_WIDTH } from '../util/config';
 
 function pad(num, size) {
   var s = num+"";
@@ -16,26 +18,75 @@ function nextLink(index, length) {
   return `/${index+1}`
 }
 
-function SlideshowTemplate({ data, pathContext: { index, length } }) {
-  const sizes =
-    get(data, 'allFile.edges[0].node.childImageSharp.sizes');
+function Slideshow({ index, length, data }) {
+  const sizes = _get(data, 'allFile.edges[0].node.childImageSharp.sizes');
 
-  return(
+  return (
     <div className="Slideshow">
-      <div className="item">
-        <Link to={nextLink(index, length)}>
-          <Img sizes={sizes} />
-        </Link>
+      <Link to={nextLink(index, length)}>
+        <Img sizes={sizes} style={{ objectFit: 'contain' }}/>
+      </Link>
+    </div>
+  );
+}
+
+function Counter({ index }) {
+  return (
+    <span className="Counter">{pad(index, 2)}</span>
+  );
+}
+
+function SlideshowMobileTemplate({ data, pathContext: { index, length } }) {
+  return (
+    <div className="SlideshowMobileTemplate">
+      <div className="Header">{data.site.siteMetadata.title}</div>
+      <Slideshow index={index} length={length} data={data} />
+      <div className="Footer">
+        <span className="Info"><Link to="/info">Information</Link></span>
+        <Counter index={index} />
       </div>
-      <div className="index">
-        <span>{pad(index, 2)}</span>
+    </div>)
+  ;
+}
+
+function SlideshowDesktopTemplate({ data, pathContext: { index, length }}) {
+  return (
+    <div className="SlideshowDesktopTemplate">
+      <div className="Header">
+        <span className="Title">{data.site.siteMetadata.title}</span>
+        <span className="Info"><Link to="/info">Information</Link></span>
+      </div>
+      <div className="Spacer" />
+      <div className="Content">
+        <Slideshow index={index} length={length} data={data} />
+        <div className="CounterContainer">
+          <Counter index={index} />
+        </div>
       </div>
     </div>
   );
 }
 
+function SlideshowTemplate(props) {
+  return(
+    <MediaQuery maxDeviceWidth={MOBILE_MAX_DEVICE_WIDTH}>
+      {matches => (
+        matches ?
+        <SlideshowMobileTemplate {...props} /> :
+        <SlideshowDesktopTemplate {...props} />
+      )}
+    </MediaQuery>
+  );
+}
+
 export const pageQuery = graphql`
   query SlideByAbsolutePath($absolutePath: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+
     allFile(
       filter: { absolutePath: { eq: $absolutePath }}
     ) {
