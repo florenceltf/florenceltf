@@ -182,6 +182,7 @@ div {
 
   .Links {
     padding-top: 16px;
+    @include padding-to-display-underline;
   }
 }
 
@@ -221,12 +222,20 @@ div {
       @include padding-to-display-underline;
       flex: 1;
       margin-right: $gutter-margin;
+
+      .Content {
+        @include padding-to-display-underline;
+      }
     }
 
     .Right {
       @include padding-to-display-underline;
       flex: 1;
       margin-left: $gutter-margin;
+
+      .Links {
+        @include padding-to-display-underline;
+      }
     }
   }
 }
