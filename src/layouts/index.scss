@@ -117,7 +117,8 @@ $Header-grid: (
 }
 
 .Layout.inverted .Header a:hover, .Layout.inverted .Info a:hover{
-  border-bottom: 2px solid white;
+  color: transparent;
+    border-bottom: 2px solid white;
 }
 
 .Header a:visited, .Info a:visited{
