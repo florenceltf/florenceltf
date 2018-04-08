@@ -4,8 +4,6 @@ import Link from 'gatsby-link'
 
 import './index.css'
 
-import Header from '../components/Header';
-
 function getClassForPath(pathname) {
   switch (pathname) {
     case '/info':
@@ -15,11 +13,15 @@ function getClassForPath(pathname) {
   }
 }
 
-const TemplateWrapper = ({ children, data, location: { pathname } }) => (
+const TemplateWrapper = ({ children, data, location: { pathname }, match: { path } }) => (
   <div className={`Layout ${getClassForPath(pathname)}`}>
     <div className="Header">
       <div className="title">
-        {data.site.siteMetadata.title}
+        {
+          pathname !== '/info' ? 
+            data.site.siteMetadata.title : 
+            <Link to ="/">{data.site.siteMetadata.title}</Link>
+        }
       </div>
       <div className="info">
         {pathname === '/info' ?
