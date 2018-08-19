@@ -6,9 +6,9 @@ import { MOBILE_MAX_DEVICE_WIDTH } from '../util/config';
 function Content() {
   return (
     <div className="Content">
-      is a Melbourne-born communications designer relocating to London, UK. Currently freelancing remotely with Melbourne-based studio, <a href="https://www.round.com.au">Round</a>. 
+      is a Melbourne-born communications designer taking time off to travel. Currently freelancing remotely with Melbourne-based studio, <a href="https://www.round.com.au">Round</a>. 
       <br></br><br></br>
-      Clients worked with while at Round include: Andrew McConnell Group, Australian Institute of Architects, <a href="http://www.thebiggroup.com.au/">The Big Group</a>, Jewish International Film Festival, <a href="https://lovingearth.co/">Loving Earth</a>, Melbourne Food & Wine Festival and <a href="http://siloarttrail.com/">Silo Art Trail</a>.
+      Clients worked with while at Round include: Andrew McConnell Group, <a href="http://wp.architecture.com.au/venicebiennale/">Australian Institute of Architects</a>, <a href="http://www.thebiggroup.com.au/">The Big Group</a>, <a href="http://jiff.com.au/">Jewish International Film Festival</a>, <a href="https://lovingearth.co/">Loving Earth</a>, <a href="http://www.melbournefoodandwine.com.au/">Melbourne Food & Wine Festival</a> and <a href="http://siloarttrail.com/">Silo Art Trail</a>.
       <br></br><br></br>
       For any portfolio or freelance enquiries, please <a href="mailto:florenceltf@gmail.com">email</a>. For any other enquiries, please still <a href="mailto:florenceltf@gmail.com">email</a>.
     </div>
