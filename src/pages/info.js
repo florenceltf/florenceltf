@@ -6,7 +6,7 @@ import { MOBILE_MAX_DEVICE_WIDTH } from '../util/config';
 function Content() {
   return (
     <div className="Content">
-      is a Melbourne-born communications designer taking time off to travel. Currently freelancing remotely with Melbourne-based studio, <a href="https://www.round.com.au">Round</a>. 
+      is a Melbourne-born communications designer taking time off to travel. Currently freelancing remotely with Melbourne-based design studio, <a href="https://www.round.com.au">Round</a>. 
       <br></br><br></br>
       Clients worked with while at Round include: Andrew McConnell Group, <a href="http://wp.architecture.com.au/venicebiennale/">Australian Institute of Architects</a>, <a href="http://www.thebiggroup.com.au/">The Big Group</a>, <a href="http://jiff.com.au/">Jewish International Film Festival</a>, <a href="https://lovingearth.co/">Loving Earth</a>, <a href="http://www.melbournefoodandwine.com.au/">Melbourne Food & Wine Festival</a> and <a href="http://siloarttrail.com/">Silo Art Trail</a>.
       <br></br><br></br>
