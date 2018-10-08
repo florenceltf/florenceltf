@@ -22,8 +22,6 @@ function Links() {
       <br></br>
       <a href="https://www.instagram.com/florenceltf">Instagram</a>
       <br></br>
-      <a href="http://holidaze.florenceltf.com/">News</a>
-      <br></br>
       <a href="mailto:florenceltf@gmail.com">Contact</a>
       <br></br>
     </div>
