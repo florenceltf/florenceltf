@@ -6,7 +6,7 @@ import { MOBILE_MAX_DEVICE_WIDTH } from '../util/config';
 function Content() {
   return (
     <div className="Content">
-      is a freelance senior designer based in Melbourne. Previously working at design studio, <a href="https://www.round.com.au">Round</a>. 
+      is a Freelance Senior Designer based in Melbourne. Previously working at design studio, <a href="https://www.round.com.au">Round</a>. 
       <br></br><br></br>
       Clients worked with while at Round include: Andrew McConnell Group (<a href="https://www.instagram.com/supernormal_canteen/">Supernormal Canteen</a>, <a href="https://www.instagram.com/meatsmith_melb/">Meatsmith</a>), Australian Institute of Architects <a href="http://wp.architecture.com.au/venicebiennale/">(Venice Biennale 2018)</a>, <a href="http://www.thebiggroup.com.au/">The Big Group</a>, <a href="http://jiff.com.au/">Jewish International Film Festival</a>, <a href="https://lovingearth.co/">Loving Earth</a>, <a href="http://www.melbournefoodandwine.com.au/">Melbourne Food & Wine Festival</a> and <a href="http://siloarttrail.com/">Silo Art Trail</a>.
       <br></br><br></br>
