@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import MediaQuery from 'react-responsive';
-import _get from 'lodash.get';
+import { get as _get } from 'lodash';
 import { MOBILE_MAX_DEVICE_WIDTH } from '../util/config';
 
 function pad(num, size) {

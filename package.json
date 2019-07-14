@@ -12,7 +12,8 @@
     "gatsby-plugin-sharp": "^1.6.24",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-sharp": "^1.6.16",
-    "lodash.get": "^4.4.2",
+    "lodash": "^4.17.14",
+    "lodash-es": "^4.17.14",
     "react-responsive": "^4.1.0"
   },
   "keywords": [
