@@ -1,5 +1,0 @@
-const MOBILE_MAX_DEVICE_WIDTH = 510;
-
-export {
-  MOBILE_MAX_DEVICE_WIDTH,
-};
