@@ -17,3 +17,10 @@ a:hover {
     color: transparent;
     border-bottom: 2px solid white;
 }
+
+::selection {
+    color: rgba(0, 0, 0, 1); /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    color: rgba(0, 0, 0, 1); /* Gecko Browsers */
+  }
