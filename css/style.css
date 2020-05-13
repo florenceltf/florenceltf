@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    color: white;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    height: 6000px;
+    margin: 15px;
+    cursor: none;
+}
+
+#cursor {
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border-radius: 10px;
+    position: absolute;
+    pointer-events: none;
+}
+
+main {
+    position: fixed;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: none;
+}
+
+a:hover {
+    color: transparent;
+    border-bottom: .075rem solid white;
+    transition: color .3s;
+    cursor: none;
+}
+
+::selection {
+    color: rgba(0, 0, 0, 1); /* WebKit/Blink Browsers */
+  }
+
+::-moz-selection {
+    color: rgba(0, 0, 0, 1); /* Gecko Browsers */
+}
+
+@media (max-width: 768px) {
+    #cursor: none;
+}
