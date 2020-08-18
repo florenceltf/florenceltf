@@ -46,3 +46,10 @@ a:hover {
 ::-moz-selection {
     color: rgba(0, 0, 0, 1); /* Gecko Browsers */
 }
+
+@media (max-width: 800px) {
+
+    body {
+        height: 100vh;
+    }
+}
