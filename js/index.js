@@ -1,7 +1,9 @@
+count = 10;
+
 $(document).ready(function () {
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $("#cursor").css("display", "none");
+        $(".cont").css("display", "none");
     } else {
         $(document).on("scroll", function () {
 
@@ -9,27 +11,42 @@ $(document).ready(function () {
             var zoom = pixels + 14
 
             $("main").css("font-size", zoom)
-            $("#cursor").css("height", zoom).css("width", zoom).css("border-radius", zoom)
-        })
+            $(".dot").css("height", zoom).css("width", zoom).css("border-radius", zoom)
+        });
 
-        $(document).mousemove(function (event) {
+        for (i = 0; i < count; i++) {
+            $(".cont").append(`<div class='dot dot${i}'></div>`);
+        }
 
-            $("#cursor").css("transform", "translate3d(" + (event.clientX - 25) + "px," + (event.clientY - 25) + "px,0px")
-
-        })
+        $(document).mousemove(function () {
+            mX = event.clientX;
+            mY = event.clientY;
+            for (i = 0; i < count; i++) {
+                $(".dot" + i).css({
+                    left: mX + "px",
+                    top: mY + "px",
+                    transition: (count - i) * 0.05 + "s linear",
+                });
+            };
+        });
 
         $(document).mouseenter(function (event) {
 
-            $("#cursor").css("display", "block")
+            $(".dot").css("display", "block")
 
         })
 
         $(document).mouseleave(function (event) {
 
-            $("#cursor").css("display", "none")
+            $(".dot").css("display", "none")
 
         })
 
     }
+
+
+
+
+
 
 });
