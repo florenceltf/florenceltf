@@ -16,6 +16,7 @@ body {
     border-radius: 10px;
     position: absolute;
     pointer-events: none;
+    display: none;
 }
 
 main {

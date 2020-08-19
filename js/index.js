@@ -17,6 +17,19 @@ $(document).ready(function () {
             $("#cursor").css("transform", "translate3d(" + (event.clientX - 25) + "px," + (event.clientY - 25) + "px,0px")
 
         })
+
+        $(document).mouseenter(function (event) {
+
+            $("#cursor").css("display", "block")
+
+        })
+
+        $(document).mouseleave(function (event) {
+
+            $("#cursor").css("display", "none")
+
+        })
+
     }
 
 });
