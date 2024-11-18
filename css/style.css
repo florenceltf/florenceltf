@@ -29,14 +29,15 @@ p {
 
 a {
     color: black;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: .075rem solid black;
 }
 
-a:hover {
+/* a:hover {
     color: lightblue;
     border-bottom: .075rem solid lightblue;
     transition: color .3s;
-}
+} */
 
 ::selection {
     color: rgba(0, 0, 0, 1); /* WebKit/Blink Browsers */
