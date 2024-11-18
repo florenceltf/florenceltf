@@ -8,7 +8,7 @@ body {
     margin: 10px;
 }
 
-.dot {
+/* .dot {
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -17,7 +17,7 @@ body {
     pointer-events: none;
     background: linear-gradient(hotpink, lightblue);
     display: none;
-}
+} */
 
 main {
     position: fixed;
@@ -45,9 +45,9 @@ a:hover {
     color: rgba(0, 0, 0, 1); /* Gecko Browsers */
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
 
     body {
         height: 100vh;
     }
-}
+} */
