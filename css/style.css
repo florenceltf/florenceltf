@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-    border-bottom: .075rem solid black;
+    border-bottom: .1rem solid black;
     transition: color .3s;
 }
 
