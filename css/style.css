@@ -69,9 +69,3 @@ a:hover {
          transition: color .3s;
     }
 } 
-
-@media (max-width: 3000px) {
-    .cont img {
-         width: 600px;
-    }
-} 
