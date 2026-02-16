@@ -52,7 +52,7 @@ a:hover {
         position: absolute;
         left: 10px;
         bottom: 10px;
-        width: 700px;
+        width: 600px;
 }
 
 @media (max-width: 800px) {
