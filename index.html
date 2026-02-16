@@ -23,12 +23,13 @@
 <body>
   <main>
 
-    <p>Florence Li Ting Fong is an independent brand designer based in Melbourne/Naarm, Australia.
-      <br>
-      Most recently Design Director at <a href="https://mecca.com.au/" target="_blank">MECCA</a>.
+    <p>FLORENCE LI TING FONG is an independent brand designer based in Melbourne/Naarm, Australia,
+      with nearly 15 years experience, working across the Arts, retail and hospitality sectors.
+      <br><br>
+      Most recently Design Director at <a href="https://mecca.com.au/" target="_blank">MECCA</a> (2021—2024).
       Previously at creative agencies,
       <a href="https://projectsofimagination.com/" target="_blank">PROJECTS OF IMAGINATION</a> and
-      <a href="https://round.com.au/" target="_blank">STUDIO ROUND</a>.<br/>
+      <a href="https://round.com.au/" target="_blank">STUDIO ROUND</a>.
       <a href="mailto:florenceltf@gmail.com">Get in touch</a> for freelance work or collaborations.
       <br/><br/>
     </p>
@@ -37,17 +38,40 @@
       <a href="mailto:florenceltf@gmail.com">Email</a> <br>
       <a href="https://www.linkedin.com/in/florenceltf/" target="_blank">LinkedIn</a><br>
       <a href="https://www.instagram.com/florenceltf/" target="_blank">Instagram</a><br>
-      ©2026
+      
     </p>
 
   </main>
 
   <div class="cont">
+
     <img src="/images/florence_folio_2025_web_11.gif" alt="Florence Folio">
+
+    <div class="flex-container">
+      <div class="column">©2026</div>
+      <div class="column">
+          <time class="aest-time" id="aest-time">10:00 AM AEST</time>
+      </div>
+    </div>
 
   </div>
 
+  <script>
+    function updateAESTTime() {
+      const now = new Date();
+      const aestTime = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+      const displayHours = (aestTime.getHours() % 12) || 12;
+      const minutes = aestTime.getMinutes().toString().padStart(2, '0');
+      const seconds = aestTime.getSeconds().toString().padStart(2, '0');
+      const ampm = aestTime.getHours() >= 12 ? 'PM' : 'AM';
+      document.getElementById('aest-time').textContent = displayHours + ':' + minutes + ':' + seconds + ' ' + ampm + ' AEST';
+    }
+    updateAESTTime();
+    setInterval(updateAESTTime, 1000);
+  </script>
 
 </body>
+
+
 
 </html>
