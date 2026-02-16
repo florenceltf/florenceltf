@@ -74,7 +74,7 @@ a:hover {
 
 
 
-@media (min-width: 800px) and (max-width: 1240px) {
+@media (min-width: 800px) and (max-width: 1800px) {
     .cont img {
          width: 550px;
     }
