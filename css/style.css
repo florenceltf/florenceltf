@@ -86,10 +86,10 @@ a:hover {
     }
 
     body {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 18px;
         line-height: 1.1;
-        padding-right:10px;
+        margin-right:10px;
     }
 
     a:hover {
