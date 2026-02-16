@@ -37,7 +37,8 @@ a {
 }
 
 a:hover {
-    border-bottom: .2rem solid #000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     transition: color .3s;
 }
 
@@ -57,7 +58,7 @@ a:hover {
         font-size: 18px;
 }
 .cont img {
-        width: 700px;
+        width: 800px;
 }
 
 .flex-container {
@@ -71,6 +72,12 @@ a:hover {
   flex: 1 1 1;
 }
 
+@media (min-width: 1728px) and (max-width: 1920px) {
+    .cont img {
+         width: 600px;
+    }
+}
+
 @media (max-width: 800px) {
     .cont img {
          width: 300px;
@@ -81,7 +88,8 @@ a:hover {
     }
 
     a:hover {
-         border-bottom: .2rem solid #000;
+         text-decoration: underline;
+         text-underline-offset: 3px;
          transition: color .3s;
     }
 }
