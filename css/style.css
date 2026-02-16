@@ -57,7 +57,7 @@ a:hover {
 
 @media (max-width: 800px) {
     .cont img {
-         width: 480px;
+         width: 300px;
     }
 
     body {
