@@ -72,9 +72,11 @@ a:hover {
   flex: 1 1 1;
 }
 
+
+
 @media (min-width: 800px) and (max-width: 1024px) {
     .cont img {
-         width: 600px;
+         width: 550px;
     }
 }
 
