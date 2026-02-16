@@ -97,4 +97,9 @@ a:hover {
          text-underline-offset: 3px;
          transition: color .3s;
     }
+
+    /* Hide specific text on small screens */
+    .hide-mobile {
+        display: none !important;
+    }
 }
