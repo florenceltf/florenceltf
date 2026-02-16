@@ -52,7 +52,7 @@ a:hover {
         position: absolute;
         left: 10px;
         bottom: 10px;
-        width: 600px;
+        width: 700px;
 }
 
 @media (max-width: 800px) {
@@ -67,5 +67,11 @@ a:hover {
     a:hover {
          border-bottom: .2rem solid #000;
          transition: color .3s;
+    }
+} 
+
+@media (max-width: 3000px) {
+    .cont img {
+         width: 600px;
     }
 } 
