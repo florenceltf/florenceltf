@@ -72,7 +72,7 @@ a:hover {
   flex: 1 1 1;
 }
 
-@media (min-width: 1000px) and (max-width: 3000px) {
+@media (min-width: 800px) and (max-width: 3000px) {
     .cont img {
          width: 600px;
     }
